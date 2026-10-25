@@ -2,21 +2,12 @@ body {
   min-height: 100vh;
 }
 
-.placeholder-box {
-  min-height: 240px;
-}
-
 /*
-  Временный блок вместо изображения товара на странице product.html.
-*/
-.placeholder-image {
-  min-height: 320px;
-}
-
-/*
-  Изображение в карточке: одинаковая высота и аккуратное кадрирование.
+  Фото в карточке товара: квадрат на всю ширину карточки.
+  object-fit: cover кадрирует изображение без искажения пропорций.
 */
 .card-img-top {
-  height: 180px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
 }

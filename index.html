@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Bootstrap Shop</title>
+  <meta name="description" content="MellShop — магазин мягких игрушек: герои игр, мемов и мультфильмов и классические мягкие зверята.">
+  <title>Главная — MellShop</title>
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
+<body class="bg-light">
   <header class="bg-primary text-white py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-8">
-          <h1 class="h3 mb-1">Bootstrap Shop</h1>
-          <p class="mb-0 opacity-75">
-            Учебный интернет-магазин на Bootstrap
-          </p>
+          <p class="h3 mb-1">MellShop</p>
+          <p class="mb-0 opacity-75">Магазин мягких игрушек на Bootstrap</p>
         </div>
 
         <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-          <span class="badge bg-light text-primary">
-            КР №2
-          </span>
+          <span class="badge bg-light text-primary">КР №2</span>
         </div>
       </div>
     </div>
@@ -30,7 +27,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+      <a class="navbar-brand fw-bold" href="index.html">MellShop</a>
 
       <button
         class="navbar-toggler"
@@ -58,6 +55,9 @@
           <li class="nav-item">
             <a class="nav-link" href="order.html">Заявка</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
 
           <li class="nav-item dropdown">
             <a
@@ -69,8 +69,8 @@
             >
               Дополнительно
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="catalog.html">Все игрушки</a></li>
               <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
               <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
             </ul>
@@ -84,56 +84,49 @@
     <section class="container my-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-6">
-          <h2 class="display-5 fw-bold">
-            Учебный каталог товаров на Bootstrap
-          </h2>
+          <h1 class="display-5 fw-bold">Мягкие игрушки, которые хочется обнять</h1>
           <p class="lead text-muted">
-            Проект демонстрирует использование Bootstrap-сетки,
-            адаптивных колонок и базовых utility-классов.
+            Плюшевые герои игр, мемов и мультфильмов и классические мягкие зверята.
+            Каждую игрушку приятно обнимать — и не стыдно подарить.
           </p>
-          <a class="btn btn-primary btn-lg" href="catalog.html">
-            Перейти в каталог
-          </a>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="catalog.html">Перейти в каталог</a>
+            <a class="btn btn-outline-primary btn-lg" href="order.html">Оформить заявку</a>
+          </div>
         </div>
 
         <div class="col-12 col-lg-6">
-          <div class="p-5 bg-light border rounded text-center">
-            <p class="mb-0 text-muted">
-              Здесь может быть изображение, баннер или промо-блок.
-            </p>
-          </div>
+          <img
+            class="img-fluid rounded-4 shadow-sm"
+            src="images/toy-store.jpg"
+            alt="Нарисованный магазин игрушек с полками плюшевых мишек"
+            width="1155"
+            height="500"
+          >
         </div>
       </div>
     </section>
 
     <section class="container my-5">
-      <h2 class="text-center mb-4">Преимущества проекта</h2>
+      <h2 class="text-center mb-4">Почему MellShop</h2>
 
       <div class="row g-4">
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Bootstrap-сетка</h3>
-            <p class="mb-0 text-muted">
-              Страница построена на 12-колоночной системе Bootstrap.
-            </p>
+            <h3 class="h5">Гипоаллергенные материалы</h3>
+            <p class="mb-0 text-muted">Плюш и холлофайбер безопасны для детей от 3 лет.</p>
           </div>
         </div>
-
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Адаптивность</h3>
-            <p class="mb-0 text-muted">
-              Колонки меняют ширину в зависимости от размера экрана.
-            </p>
+            <h3 class="h5">Доставка за один день</h3>
+            <p class="mb-0 text-muted">Курьер по Москве привезёт заказ уже завтра.</p>
           </div>
         </div>
-
         <div class="col-12 col-md-4">
           <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Готовая база</h3>
-            <p class="mb-0 text-muted">
-              Проект подготовлен к добавлению карточек, форм и модальных окон.
-            </p>
+            <h3 class="h5">Подарочная упаковка</h3>
+            <p class="mb-0 text-muted">Бесплатно упакуем любую игрушку в праздничную коробку.</p>
           </div>
         </div>
       </div>
@@ -142,51 +135,71 @@
     <section class="container my-5" id="popular">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="mb-0">Популярные товары</h2>
-        <a class="btn btn-outline-primary" href="catalog.html">
-          Все товары
-        </a>
+        <a class="btn btn-outline-primary" href="catalog.html">Все игрушки</a>
       </div>
 
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-success mb-3">Новинка</span>
-            <h3 class="h5">Товар 1</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
-            </p>
-            <p class="fw-bold mb-3">1000 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
+          <div class="card h-100 shadow-sm">
+            <img
+              class="card-img-top"
+              src="images/shlepa.jpg"
+              alt="Мягкая игрушка Шлёпа — каракал с большими ушами"
+              width="800"
+              height="800"
+            >
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+                <h3 class="card-title h5 mb-0">Шлёпа</h3>
+                <span class="badge bg-warning text-dark">Хит</span>
+              </div>
+              <p class="small text-muted mb-2">Мемы</p>
+              <p class="card-text text-muted">Тот самый каракал из интернета — мягкий, круглый и очень довольный.</p>
+              <p class="fw-bold fs-5 mt-auto">1490 руб.</p>
+              <a class="btn btn-primary align-self-start" href="order.html">Заказать</a>
+            </div>
           </div>
         </div>
-
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-warning text-dark mb-3">Хит</span>
-            <h3 class="h5">Товар 2</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
-            </p>
-            <p class="fw-bold mb-3">1500 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
+          <div class="card h-100 shadow-sm">
+            <img
+              class="card-img-top"
+              src="images/pudge.jpg"
+              alt="Мягкая игрушка Малыш Пудж из Dota 2"
+              width="800"
+              height="800"
+            >
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+                <h3 class="card-title h5 mb-0">Малыш Пудж</h3>
+                <span class="badge bg-success">Новинка</span>
+              </div>
+              <p class="small text-muted mb-2">Игровые персонажи</p>
+              <p class="card-text text-muted">Плюшевая версия героя Dota 2 — без крюка, зато очень обнимательная.</p>
+              <p class="fw-bold fs-5 mt-auto">2190 руб.</p>
+              <a class="btn btn-primary align-self-start" href="order.html">Заказать</a>
+            </div>
           </div>
         </div>
-
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-danger mb-3">Скидка</span>
-            <h3 class="h5">Товар 3</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
-            </p>
-            <p class="fw-bold mb-3">2000 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
+          <div class="card h-100 shadow-sm">
+            <img
+              class="card-img-top"
+              src="images/shelly.jpg"
+              alt="Мягкая игрушка Шелли из Brawl Stars с фиолетовыми волосами"
+              width="800"
+              height="800"
+            >
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+                <h3 class="card-title h5 mb-0">Шелли</h3>
+                <span class="badge bg-danger">Скидка</span>
+              </div>
+              <p class="small text-muted mb-2">Игровые персонажи</p>
+              <p class="card-text text-muted">Боец из Brawl Stars с фиолетовыми волосами и плюшевым дробовиком.</p>
+              <p class="fw-bold fs-5 text-danger mt-auto">1690 руб. <s class="fs-6 fw-normal text-muted ms-1">1990 руб.</s></p>
+              <a class="btn btn-primary align-self-start" href="order.html">Заказать</a>
+            </div>
           </div>
         </div>
       </div>
@@ -198,17 +211,14 @@
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
           <p class="mb-0">
-            &copy; 2026 Bootstrap Shop. Учебный проект.
+            &copy; 2026 MellShop — магазин мягких игрушек. Учебный проект.
           </p>
         </div>
 
         <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">
-            Каталог
-          </a>
-          <a class="text-white text-decoration-none" href="order.html">
-            Заявка
-          </a>
+          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
+          <a class="text-white text-decoration-none me-3" href="order.html">Заявка</a>
+          <a class="text-white text-decoration-none" href="contacts.html">Контакты</a>
         </div>
       </div>
     </div>

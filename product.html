@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Товар — Bootstrap Shop</title>
+  <meta name="description" content="Мягкая игрушка «Бенгальский кот» в MellShop: фото, описание, характеристики и цена.">
+  <title>Бенгальский кот — MellShop</title>
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-
 <body class="bg-light">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+      <a class="navbar-brand fw-bold" href="index.html">MellShop</a>
 
       <button
         class="navbar-toggler"
@@ -40,6 +40,9 @@
           <li class="nav-item">
             <a class="nav-link" href="order.html">Заявка</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
 
           <li class="nav-item dropdown">
             <a
@@ -51,8 +54,8 @@
             >
               Дополнительно
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="catalog.html">Все игрушки</a></li>
               <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
               <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
             </ul>
@@ -67,39 +70,41 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Товар 1</li>
+        <li class="breadcrumb-item active" aria-current="page">Бенгальский кот</li>
       </ol>
     </nav>
 
     <div class="row g-4">
       <div class="col-12 col-lg-6">
         <div class="card shadow-sm">
-          <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
-            <span class="text-muted">Изображение товара</span>
-          </div>
+          <img
+            class="img-fluid rounded"
+            src="images/bengal-cat.jpg"
+            alt="Мягкая игрушка — бенгальский кот с пятнистым окрасом"
+            width="800"
+            height="800"
+          >
         </div>
       </div>
 
       <div class="col-12 col-lg-6">
-        <span class="badge bg-success mb-3">Новинка</span>
-        <h1 class="h2">Товар 1</h1>
+        <span class="badge bg-warning text-dark mb-3">Хит</span>
+        <h1 class="h2">Бенгальский кот</h1>
         <p class="lead text-muted">
-          Подробное описание учебного товара для страницы карточки.
+          Мягкая игрушка в виде бенгальского кота с реалистичным пятнистым окрасом.
+          Кот устойчиво сидит благодаря утяжелённому основанию, поэтому его можно
+          поставить на полку или кровать.
         </p>
 
-        <p class="fs-3 fw-bold">1000 руб.</p>
+        <p class="fs-3 fw-bold">2490 руб.</p>
 
-        <div class="d-flex gap-2 mb-4">
-          <a class="btn btn-primary btn-lg" href="order.html">
-            Оформить заявку
-          </a>
-          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
-            Назад в каталог
-          </a>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">Назад в каталог</a>
         </div>
 
-        <div class="alert alert-warning" role="alert">
-          Это учебная карточка товара. Данные используются для демонстрации Bootstrap-компонентов.
+        <div class="alert alert-success" role="alert">
+          В наличии. Курьер по Москве привезёт игрушку на следующий день.
         </div>
       </div>
     </div>
@@ -112,11 +117,31 @@
           <tbody>
             <tr>
               <th scope="row">Категория</th>
-              <td>Учебные товары</td>
+              <td>Животные</td>
             </tr>
             <tr>
-              <th scope="row">Цена</th>
-              <td>1000 руб.</td>
+              <th scope="row">Размер</th>
+              <td>35 см</td>
+            </tr>
+            <tr>
+              <th scope="row">Материал</th>
+              <td>Плюш (100% полиэстер)</td>
+            </tr>
+            <tr>
+              <th scope="row">Наполнитель</th>
+              <td>Холлофайбер</td>
+            </tr>
+            <tr>
+              <th scope="row">Возраст</th>
+              <td>3+</td>
+            </tr>
+            <tr>
+              <th scope="row">Уход</th>
+              <td>Ручная стирка при 30 °C</td>
+            </tr>
+            <tr>
+              <th scope="row">Страна производства</th>
+              <td>Россия</td>
             </tr>
             <tr>
               <th scope="row">Наличие</th>
@@ -141,7 +166,7 @@
               aria-expanded="true"
               aria-controls="faqOne"
             >
-              Можно ли оформить заявку без регистрации?
+              Можно ли стирать игрушку?
             </button>
           </h3>
           <div
@@ -150,11 +175,10 @@
             data-bs-parent="#faqAccordion"
           >
             <div class="accordion-body">
-              Да, в учебном проекте заявка оформляется без регистрации.
+              Да, кота можно стирать вручную при 30 °C. Не отжимайте его в машинке — просто дайте высохнуть на воздухе.
             </div>
           </div>
         </div>
-
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button
@@ -165,7 +189,7 @@
               aria-expanded="false"
               aria-controls="faqTwo"
             >
-              Где используется Bootstrap?
+              Подходит ли игрушка маленьким детям?
             </button>
           </h3>
           <div
@@ -174,13 +198,54 @@
             data-bs-parent="#faqAccordion"
           >
             <div class="accordion-body">
-              Bootstrap используется для сетки, карточек, форм, навигации, сообщений и модальных окон.
+              Игрушка рассчитана на детей от 3 лет: глаза и детали надёжно пришиты, наполнитель гипоаллергенный.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqThree"
+              aria-expanded="false"
+              aria-controls="faqThree"
+            >
+              Можно ли оформить заявку без регистрации?
+            </button>
+          </h3>
+          <div
+            id="faqThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Да, достаточно заполнить форму на странице заявки — менеджер перезвонит и подтвердит заказ.
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">
+            &copy; 2026 MellShop — магазин мягких игрушек. Учебный проект.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-6 text-md-end">
+          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
+          <a class="text-white text-decoration-none me-3" href="order.html">Заявка</a>
+          <a class="text-white text-decoration-none" href="contacts.html">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
