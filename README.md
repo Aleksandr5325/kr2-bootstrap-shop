@@ -35,6 +35,23 @@
 - добавлен файл `css/custom.css` для минимальных доработок;
 - проект подготовлен к сдаче контрольной работы №2.
 
+## Используемый фреймворк
+
+Bootstrap 5.3.8.
+
+## Подключение Bootstrap
+
+В проекте Bootstrap подключён **локально**, без CDN. Файлы фреймворка скачаны с официального сайта (https://getbootstrap.com/docs/5.3/getting-started/download/, вариант «Compiled CSS and JS») и размещены в папке `vendor/bootstrap/`.
+
+Используются:
+
+- `vendor/bootstrap/css/bootstrap.min.css` — стили Bootstrap;
+- `vendor/bootstrap/js/bootstrap.bundle.min.js` — JavaScript Bootstrap вместе с Popper (мобильное меню, выпадающий список, модальное окно, accordion).
+
+Рядом лежат `.map`-файлы (source maps): с ними DevTools показывает исходный код Bootstrap и не выдаёт предупреждений.
+
+Собственный файл `css/custom.css` подключается **после** Bootstrap, чтобы его правила могли переопределять стили фреймворка.
+
 ## Используемые компоненты Bootstrap
 
 - `navbar` — единая навигация на всех страницах, с мобильным меню и выпадающим списком;
@@ -51,7 +68,7 @@
 ## Используемые технологии
 
 - HTML;
-- Bootstrap 5.3.3 (CSS и JS Bundle через CDN);
+- Bootstrap 5.3.8 (CSS и JS Bundle, подключены локально из `vendor/bootstrap/`);
 - CSS;
 - Git;
 - GitHub.
@@ -64,6 +81,7 @@
 - `order.html` — форма заявки;
 - `css/custom.css` — дополнительные стили проекта;
 - `images/` — изображения проекта;
+- `vendor/bootstrap/` — локальные файлы Bootstrap (CSS и JS);
 - `README.md` — описание проекта;
 - `.gitignore` — список файлов, исключённых из Git.
 
