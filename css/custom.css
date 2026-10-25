@@ -5,3 +5,18 @@ body {
 .placeholder-box {
   min-height: 240px;
 }
+
+/*
+  Временный блок вместо изображения товара на странице product.html.
+*/
+.placeholder-image {
+  min-height: 320px;
+}
+
+/*
+  Изображение в карточке: одинаковая высота и аккуратное кадрирование.
+*/
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
