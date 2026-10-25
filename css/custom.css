@@ -1,22 +1,145 @@
+/*
+  Шрифт Nunito с Google Fonts: округлые буквы подходят магазину мягких игрушек.
+  @import должен стоять в самом начале файла.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+
+/* ===============================
+   1. Фирменная тема MellShop поверх Bootstrap
+   =============================== */
+
+/*
+  Bootstrap 5.3 берёт цвета, шрифт и скругления из CSS-переменных --bs-*.
+  Меняем их здесь — и большинство компонентов перекрашивается само,
+  без правки HTML. Палитра та же, что в КР №1: фиолетовый + тёплый кремовый.
+*/
+:root {
+  --bs-primary: #6d3fc0;
+  --bs-primary-rgb: 109, 63, 192;
+  --bs-primary-text-emphasis: #3b1f6e;
+  --bs-primary-bg-subtle: #ece3ff;
+  --bs-primary-border-subtle: #cdb8f0;
+
+  --bs-link-color: #6d3fc0;
+  --bs-link-color-rgb: 109, 63, 192;
+  --bs-link-hover-color: #4f2a96;
+  --bs-link-hover-color-rgb: 79, 42, 150;
+
+  /* bg-light у страниц становится тёплым кремовым, как фон в КР №1 */
+  --bs-light-rgb: 255, 250, 235;
+
+  --bs-body-font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-lg: 1rem;
+  --bs-focus-ring-color: rgba(109, 63, 192, 0.25);
+}
+
+/*
+  У кнопок, пагинации, выпадающего меню и полей формы Bootstrap
+  записал синий цвет прямо в их правила, поэтому переопределяем
+  переменные этих компонентов отдельно.
+*/
+.btn-primary {
+  --bs-btn-bg: #6d3fc0;
+  --bs-btn-border-color: #6d3fc0;
+  --bs-btn-hover-bg: #5a32a3;
+  --bs-btn-hover-border-color: #5a32a3;
+  --bs-btn-active-bg: #4f2a96;
+  --bs-btn-active-border-color: #4f2a96;
+  --bs-btn-disabled-bg: #6d3fc0;
+  --bs-btn-disabled-border-color: #6d3fc0;
+  --bs-btn-focus-shadow-rgb: 109, 63, 192;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #6d3fc0;
+  --bs-btn-border-color: #6d3fc0;
+  --bs-btn-hover-bg: #6d3fc0;
+  --bs-btn-hover-border-color: #6d3fc0;
+  --bs-btn-active-bg: #4f2a96;
+  --bs-btn-active-border-color: #4f2a96;
+  --bs-btn-disabled-color: #6d3fc0;
+  --bs-btn-disabled-border-color: #6d3fc0;
+  --bs-btn-focus-shadow-rgb: 109, 63, 192;
+}
+
+.pagination {
+  --bs-pagination-active-bg: #6d3fc0;
+  --bs-pagination-active-border-color: #6d3fc0;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(109, 63, 192, 0.25);
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #6d3fc0;
+}
+
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(109, 63, 192, 0.25);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #b69ce6;
+  box-shadow: 0 0 0 0.25rem rgba(109, 63, 192, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #6d3fc0;
+  border-color: #6d3fc0;
+}
+
+
+/* ===============================
+   2. Общие доработки
+   =============================== */
+
 body {
   min-height: 100vh;
 }
 
-.placeholder-box {
-  min-height: 240px;
-}
-
 /*
-  Временный блок вместо изображения товара на странице product.html.
+  Меню закреплено сверху (sticky-top), поэтому при переходе по якорю
+  (#popular) раздел не должен прятаться под ним — оставляем отступ сверху.
 */
-.placeholder-image {
-  min-height: 320px;
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
+
+/* ===============================
+   3. Карточки товаров и карусель
+   =============================== */
+
 /*
-  Изображение в карточке: одинаковая высота и аккуратное кадрирование.
+  Фото в карточке товара: квадрат на всю ширину карточки.
+  object-fit: cover кадрирует изображение без искажения пропорций.
 */
 .card-img-top {
-  height: 180px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+}
+
+/*
+  Карточка товара «приподнимается» при наведении.
+  transition делает движение плавным в обе стороны.
+*/
+.product-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.5rem rgba(109, 63, 192, 0.18) !important;
+}
+
+/*
+  Слайды карусели на главной: картинки разного размера
+  получают одинаковую высоту и кадрируются без искажений.
+*/
+.hero-carousel .carousel-item img {
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
