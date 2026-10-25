@@ -11,3 +11,12 @@ body {
   height: auto;
   object-fit: cover;
 }
+
+/*
+  Слайды карусели на главной: картинки разного размера
+  получают одинаковую высоту и кадрируются без искажений.
+*/
+.hero-carousel .carousel-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}

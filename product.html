@@ -110,45 +110,115 @@
     </div>
 
     <section class="mt-5">
-      <h2 class="h4 mb-3">Характеристики</h2>
+      <h2 class="h4 mb-3">О товаре</h2>
 
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered align-middle">
-          <tbody>
-            <tr>
-              <th scope="row">Категория</th>
-              <td>Животные</td>
-            </tr>
-            <tr>
-              <th scope="row">Размер</th>
-              <td>35 см</td>
-            </tr>
-            <tr>
-              <th scope="row">Материал</th>
-              <td>Плюш (100% полиэстер)</td>
-            </tr>
-            <tr>
-              <th scope="row">Наполнитель</th>
-              <td>Холлофайбер</td>
-            </tr>
-            <tr>
-              <th scope="row">Возраст</th>
-              <td>3+</td>
-            </tr>
-            <tr>
-              <th scope="row">Уход</th>
-              <td>Ручная стирка при 30 °C</td>
-            </tr>
-            <tr>
-              <th scope="row">Страна производства</th>
-              <td>Россия</td>
-            </tr>
-            <tr>
-              <th scope="row">Наличие</th>
-              <td>В наличии</td>
-            </tr>
-          </tbody>
-        </table>
+      <ul class="nav nav-tabs" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="specs-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#specs"
+            type="button"
+            role="tab"
+            aria-controls="specs"
+            aria-selected="true"
+          >
+            Характеристики
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="description-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#description"
+            type="button"
+            role="tab"
+            aria-controls="description"
+            aria-selected="false"
+          >
+            Описание
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="delivery-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#delivery"
+            type="button"
+            role="tab"
+            aria-controls="delivery"
+            aria-selected="false"
+          >
+            Доставка и оплата
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content border border-top-0 rounded-bottom bg-white p-3" id="productTabsContent">
+        <div class="tab-pane fade show active" id="specs" role="tabpanel" aria-labelledby="specs-tab" tabindex="0">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle mb-0">
+              <caption class="caption-top">Характеристики игрушки</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Категория</th>
+                  <td>Животные</td>
+                </tr>
+                <tr>
+                  <th scope="row">Размер</th>
+                  <td>35 см</td>
+                </tr>
+                <tr>
+                  <th scope="row">Материал</th>
+                  <td>Плюш (100% полиэстер)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Наполнитель</th>
+                  <td>Холлофайбер</td>
+                </tr>
+                <tr>
+                  <th scope="row">Возраст</th>
+                  <td>3+</td>
+                </tr>
+                <tr>
+                  <th scope="row">Уход</th>
+                  <td>Ручная стирка при 30 °C</td>
+                </tr>
+                <tr>
+                  <th scope="row">Страна производства</th>
+                  <td>Россия</td>
+                </tr>
+                <tr>
+                  <th scope="row">Наличие</th>
+                  <td>В наличии</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab" tabindex="0">
+          <p>
+            Бенгальский кот — реалистичная мягкая игрушка с пятнистым окрасом, как у настоящей
+            бенгальской кошки. Благодаря утяжелённому основанию кот устойчиво сидит и не заваливается.
+          </p>
+          <p class="mb-0">
+            Подойдёт в подарок и детям, и взрослым любителям кошек: его можно поставить на полку,
+            стол или кровать.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab" tabindex="0">
+          <ul class="mb-0">
+            <li>Курьером по Москве — на следующий день, 300 руб.</li>
+            <li>Самовывоз из магазина на ул. Плюшевой — бесплатно.</li>
+            <li>Почтой России — 5–10 дней, 400 руб.</li>
+            <li>Оплата при получении: наличными или картой.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
